@@ -11,9 +11,14 @@ def process_input():
   reading_data = False
 
   for line in fileinput.input():
+
     if line[0] != '%':
       line = line.rstrip()
       if len(line):
+        #raw data
+        lines.append(line)
+
+        # Process input
         if line.startswith('@relation'):
           relations.append(line.split()[1])
         elif line.startswith('@attribute'):
@@ -26,7 +31,9 @@ def process_input():
           line = line.split(',')
           data.append(line)
 
+
   data = data[1:]
+  #pprint(lines)
   pprint(relations)
   pprint(attributes)
   pprint(data)
