@@ -7,7 +7,6 @@ def process_input():
   relations = []
   attributes = {}
   data = []
-  s = len(lines)
   reading_data = False
 
   for line in fileinput.input():
@@ -32,14 +31,18 @@ def process_input():
           data.append(line)
 
 
-  data = data[1:]
+  #data = data[1:]
   #pprint(lines)
-  pprint(relations)
-  pprint(attributes)
-  pprint(data)
+  #pprint(relations)
+  #pprint(attributes)
+  #pprint(data)
+  return relations, attributes, data[1:]
 
 def main():
-  process_input()
+  relation, attributes, data = process_input()
+  pprint(relation)
+  pprint(attributes)
+  pprint(data)
 
   pass
 
