@@ -30,12 +30,6 @@ def process_input():
           line = line.split(',')
           data.append(line)
 
-
-  #data = data[1:]
-  #pprint(lines)
-  #pprint(relations)
-  #pprint(attributes)
-  #pprint(data)
   return relations, attributes, data[1:]
 
 def main():
