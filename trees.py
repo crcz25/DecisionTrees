@@ -14,7 +14,7 @@ class DecisionTreeNode:
     self.level = level
 
   def __str__(self):
-    return " " * self.level + self.name
+    return "  " * self.level + self.name
 
 def process_input():
   lines = []
